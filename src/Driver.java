@@ -6,7 +6,7 @@ public class Driver {
 
 	public static void main(String[] args) {
 		try {
-			File myObj = new File("/home/bk/Desktop/big-db.csv");
+			File myObj = new File("big-db.csv");
 			if (myObj.createNewFile()) {
 				System.out.println("File created: " + myObj.getName());
 				write();
@@ -22,7 +22,7 @@ public class Driver {
 
 	public static void write() {
 		try {
-			FileWriter myWriter = new FileWriter("/home/bk/Desktop/big-db.csv");
+			FileWriter myWriter = new FileWriter("big-db.csv");
 			Row r = new Row();
 			myWriter.write(r.columns);
 			for (int i = 0; i < r.numRows; i++) {
